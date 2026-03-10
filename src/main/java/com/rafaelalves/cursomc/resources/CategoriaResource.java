@@ -24,8 +24,6 @@ public class CategoriaResource {
     @GetMapping("/{id}")
     public ResponseEntity<Categoria> find(@PathVariable Integer id) {
         Categoria obj = service.buscar(id).get();
-        System.out.println(obj.getNome());
-
         return ResponseEntity.ok().body(obj);
     }
 
